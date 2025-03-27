@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="form-group">
+    <van-field
+      value="{{ title }}"
+      label="重要事项"
+      placeholder="请输入重要事项（50字以内）"
+      maxlength="50"
+      show-word-limit
+      bind:change="onTitleChange"
+    />
+    
+    <van-field
+      value="{{ description }}"
+      label="备注说明"
+      type="textarea"
+      placeholder="请输入备注说明（选填，200字以内）"
+      maxlength="200"
+      show-word-limit
+      autosize
+      bind:change="onDescriptionChange"
+    />
+
+    <van-cell title="目标完成时间" is-link bind:tap="showDatetimePicker" value="{{endTimeText}}" />
+  </view>
+
+  <view class="button-group">
+    <van-button type="primary" block bind:tap="handleSubmit">开始计时</van-button>
+  </view>
+
+  <van-popup show="{{ showDatetimePicker }}" position="bottom">
+    <van-datetime-picker
+      type="datetime"
+      value="{{ endTime }}"
+      min-date="{{ minDate }}"
+      bind:confirm="onDatetimeConfirm"
+      bind:cancel="onDatetimeCancel"
+    />
+  </van-popup>
+
+  <van-toast id="van-toast" />
+</view>

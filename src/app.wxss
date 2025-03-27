@@ -1,0 +1,39 @@
+/**app.wxss**/
+page {
+  --primary-color: #1989fa;
+  --warning-color: #ff976a;
+  --danger-color: #ee0a24;
+  --success-color: #07c160;
+  
+  font-size: 26px;
+  line-height: 1.6;
+  background-color: #f7f8fa;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20rpx;
+}
+
+.mb-20 {
+  margin-bottom: 20rpx;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weui-tabbar__label {
+  font-size: 28px; /* 根据需要调整大小 */
+}

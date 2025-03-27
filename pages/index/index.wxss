@@ -1,0 +1,74 @@
+.container {
+  padding: 30rpx;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.empty-state {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  margin-top: 40vh;
+}
+
+.empty-state button {
+  margin-top: 30rpx;
+}
+
+.target-info {
+  background: #fff;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+
+.countdown {
+  text-align: center;
+  margin: 30rpx 0;
+}
+
+.countdown .time {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10rpx;
+}
+
+.progress-container {
+  margin: 30rpx 0;
+  position: relative;
+}
+
+.progress-text {
+  position: absolute;
+  right: 0;
+  top: -30rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.remark {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.remark .label {
+  color: #333;
+}
+
+.actions {
+  margin-top: 50rpx;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20rpx;
+}

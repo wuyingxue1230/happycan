@@ -1,0 +1,31 @@
+<![CDATA[<view class="container">
+  <block wx:if="{{!targetData}}">
+    <view class="empty-state">
+      <text>还没有设置重要事项</text>
+      <button type="primary" bindtap="goToSetting">去设置</button>
+    </view>
+  </block>
+  
+  <block wx:else>
+    <view class="target-info">
+      <view class="title">{{targetData.title}}</view>
+      <view class="countdown">
+        <text>剩余时间</text>
+        <view class="time">{{countdown}}</view>
+      </view>
+      <view class="progress-container">
+        <progress percent="{{progress}}" stroke-width="12" 
+          color="{{progressColor}}" active active-mode="forwards"/>
+        <text class="progress-text">{{progress}}%</text>
+      </view>
+      <view class="remark" wx:if="{{targetData.remark}}">
+        <text class="label">备注：</text>
+        <text>{{targetData.remark}}</text>
+      </view>
+      <view class="actions">
+        <button type="primary" size="mini" bindtap="resetTarget">重置</button>
+        <button type="default" size="mini" bindtap="goToSetting">修改</button>
+      </view>
+    </view>
+  </block>
+</view>]]>

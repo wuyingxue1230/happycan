@@ -1,0 +1,16 @@
+{
+  "name": "important-countdown",
+  "version": "1.0.0",
+  "description": "重要事项倒计时小程序",
+  "scripts": {
+    "dev": "miniprogram-build dev",
+    "build": "miniprogram-build build"
+  },
+  "dependencies": {
+    "@vant/weapp": "^1.10.19"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.9.1",
+    "typescript": "^4.9.5"
+  }
+}

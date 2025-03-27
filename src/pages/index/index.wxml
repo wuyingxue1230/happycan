@@ -1,0 +1,53 @@
+<view class="container">
+  <block wx:if="{{tasks.length > 0}}">
+    <view class="task-list">
+      <view class="task-card" wx:for="{{tasks}}" wx:key="id">
+        <view class="task-title">{{item.title}}</view>
+        <view class="countdown">{{countdown[item.id] || '计算中...'}}</view>
+        <view class="progress-container">
+          <van-circle
+            value="{{progress[item.id] || 0}}"
+            color="{{progressColor[item.id] || '#ee0a24'}}"
+            size="100"
+            stroke-width="8"
+            text="{{progress[item.id] || 0}}%"
+            layer-color="#f5f5f5"
+          />
+        </view>
+        <view class="description" wx:if="{{item.description}}">
+          {{item.description}}
+        </view>
+        <view class="progress-update">
+          <van-field
+            type="number"
+            value="{{inputProgress[item.id]}}"
+            placeholder="请输入已完成进度(0-100)"
+            bind:change="onProgressChange"
+            input-align="center"
+            data-task-id="{{item.id}}"
+          />
+          <van-button 
+            type="primary" 
+            size="small" 
+            bind:tap="updateProgress" 
+            block
+            data-task-id="{{item.id}}"
+          >
+            更新进度
+          </van-button>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="empty-state">
+      <view class="empty-text">还没有设置重要事项</view>
+    </view>
+  </block>
+
+  <view class="add-button-container">
+    <van-button type="primary" bind:tap="navigateToSetting" round icon="plus" custom-class="add-button" />
+  </view>
+
+  <van-toast id="van-toast" />
+</view>

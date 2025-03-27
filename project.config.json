@@ -1,0 +1,44 @@
+{
+  "description": "重要事项倒计时小程序",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "miniprogramRoot": "src/",
+  "compileType": "miniprogram",
+  "projectname": "important-countdown",
+  "setting": {
+    "useCompilerPlugins": [
+      "typescript"
+    ],
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "es6": true,
+    "enhance": true,
+    "minified": true,
+    "uglifyFileName": false,
+    "useApiHostProcess": true,
+    "useMultiFrameRuntime": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./src/package.json",
+        "miniprogramNpmDistDir": "./src"
+      }
+    ]
+  },
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {},
+  "srcMiniprogramRoot": "src/",
+  "appid": "wxcd8c222c41fa4f58",
+  "libVersion": "3.0.0",
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

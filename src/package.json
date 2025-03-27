@@ -1,0 +1,9 @@
+{
+  "name": "important-countdown",
+  "version": "1.0.0",
+  "description": "重要事项倒计时小程序",
+  "main": "app.js",
+  "dependencies": {
+    "@vant/weapp": "^1.11.7"
+  }
+}

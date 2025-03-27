@@ -1,0 +1,25 @@
+<![CDATA[<view class="container">
+  <form bindsubmit="handleSubmit">
+    <view class="form-item">
+      <text class="label">重要事项</text>
+      <input name="title" placeholder="请输入重要事项（50字以内）" maxlength="50" />
+    </view>
+    
+    <view class="form-item">
+      <text class="label">目标完成时间</text>
+      <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="picker">{{date}}</view>
+      </picker>
+      <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+        <view class="picker">{{time}}</view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">备注说明（选填）</text>
+      <textarea name="remark" placeholder="请输入备注说明（200字以内）" maxlength="200" />
+    </view>
+
+    <button form-type="submit" type="primary">保存</button>
+  </form>
+</view>]]>

@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="stats-card">
+    <view class="stats-title">统计数据</view>
+    <view class="stats-content">
+      <view class="stats-item">
+        <text class="stats-label">完成任务</text>
+        <text class="stats-value">{{completedCount}}</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-label">进行中</text>
+        <text class="stats-value">{{ongoingCount}}</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-label">完成率</text>
+        <text class="stats-value">{{completionRate}}%</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="history-list">
+    <view class="history-title">历史记录</view>
+    <block wx:if="{{historyTasks.length > 0}}">
+      <view class="task-item" wx:for="{{historyTasks}}" wx:key="id">
+        <view class="task-header">
+          <text class="task-title">{{item.title}}</text>
+          <text class="task-status {{item.status}}">{{statusText[item.status]}}</text>
+        </view>
+        <view class="task-time">完成时间：{{item.updateTimeText || formatDate(item.updateTime)}}</view>
+        <view class="task-description" wx:if="{{item.description}}">
+          {{item.description}}
+        </view>
+      </view>
+    </block>
+    <view class="empty-state" wx:else>
+      暂无历史记录
+    </view>
+  </view>
+</view>
