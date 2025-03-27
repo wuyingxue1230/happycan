@@ -35,7 +35,7 @@
   "simulatorPluginLibVersion": {},
   "condition": {},
   "srcMiniprogramRoot": "src/",
-  "appid": "wxcd8c222c41fa4f58",
+  "appid": "此处替换自己的小程序开发者appid",
   "libVersion": "3.0.0",
   "editorSetting": {
     "tabIndent": "insertSpaces",
