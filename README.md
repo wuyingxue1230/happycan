@@ -24,7 +24,7 @@
 1. 克隆项目到本地：
 ```bash
 git clone [项目地址]
-cd happycan1
+cd happycan
 ```
 
 2. 安装依赖：
@@ -50,7 +50,7 @@ yarn
 ## 项目结构
 
 ```
-happycan1/
+happycan/
 ├── src/                # 小程序源代码
 │   ├── components/     # 自定义组件
 │   ├── pages/         # 页面文件
